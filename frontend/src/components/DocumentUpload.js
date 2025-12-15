@@ -77,7 +77,7 @@ const DocumentUpload = () => {
       } else {
         setUploadStatus({
           type: 'error',
-          message: 'Please select a valid file type (PDF, TXT, MD, DOCX)',
+          message: 'Please select a valid file type (PDF, TXT, MD)',
         });
       }
     }
@@ -90,7 +90,7 @@ const DocumentUpload = () => {
       'text/markdown',
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
-    const validExtensions = ['.pdf', '.txt', '.md', '.docx'];
+    const validExtensions = ['.pdf', '.txt', '.md'];
 
     return (
       validTypes.includes(file.type) ||
@@ -201,7 +201,7 @@ const DocumentUpload = () => {
             <input
               id="file-input"
               type="file"
-              accept=".pdf,.txt,.md,.docx"
+              accept=".pdf,.txt,.md"
               onChange={handleFileSelect}
               style={{ display: 'none' }}
             />
@@ -221,7 +221,7 @@ const DocumentUpload = () => {
             </Typography>
 
             <Typography variant="caption" color="text.secondary">
-              Supported formats: PDF, TXT, MD, DOCX (Max size: 10MB)
+              Supported formats: PDF, TXT, MD (Max size: 10MB)
             </Typography>
           </Box>
 
@@ -338,7 +338,7 @@ const DocumentUpload = () => {
             interface
           </Typography>
           <Typography variant="body2">
-            • Supported file types: PDF, TXT, MD, DOCX
+            • Supported file types: PDF, TXT, MD
           </Typography>
         </CardContent>
       </Card>
