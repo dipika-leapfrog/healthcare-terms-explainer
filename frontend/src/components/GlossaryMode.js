@@ -36,7 +36,7 @@ const GlossaryMode = () => {
   ];
 
   const handleSearch = async (term = searchTerm) => {
-    if (!term.trim() || isLoading) return;
+    if (!String(term)?.trim() || isLoading) return;
 
     setIsLoading(true);
     try {
@@ -93,8 +93,8 @@ const GlossaryMode = () => {
         <Button
           variant="contained"
           startIcon={<Search />}
-          onClick={handleSearch}
-          disabled={!searchTerm.trim() || isLoading}
+          onClick={() => handleSearch(searchTerm)}
+          disabled={!searchTerm?.trim() || isLoading}
           sx={{ minWidth: 120 }}
         >
           Define

@@ -121,8 +121,6 @@ const ChatInterface = () => {
     switch (messageMode) {
       case 'simple':
         return 'success';
-      case 'technical':
-        return 'warning';
       case 'glossary':
         return 'info';
       default:
@@ -134,8 +132,6 @@ const ChatInterface = () => {
     switch (messageMode) {
       case 'simple':
         return 'Simple';
-      case 'technical':
-        return 'Technical';
       case 'glossary':
         return 'Definition';
       default:
@@ -156,7 +152,6 @@ const ChatInterface = () => {
           >
             <MenuItem value="standard">Standard</MenuItem>
             <MenuItem value="simple">Simple (Beginner)</MenuItem>
-            <MenuItem value="technical">Technical (Professional)</MenuItem>
             <MenuItem value="glossary">Glossary (Quick Definition)</MenuItem>
           </Select>
         </FormControl>
@@ -166,8 +161,6 @@ const ChatInterface = () => {
           sx={{ mt: 1, color: 'text.secondary' }}
         >
           {mode === 'simple' && 'Easy-to-understand explanations for beginners'}
-          {mode === 'technical' &&
-            'Detailed technical information for professionals'}
           {mode === 'glossary' && 'Quick definitions and explanations'}
           {mode === 'standard' && 'Comprehensive explanations with context'}
         </Typography>

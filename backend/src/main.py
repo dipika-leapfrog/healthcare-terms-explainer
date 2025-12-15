@@ -33,6 +33,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 # Initialize components
@@ -43,7 +44,7 @@ qa_chain = HealthcareQAChain()
 # Pydantic models for request/response
 class QuestionRequest(BaseModel):
     question: str
-    mode: Optional[str] = "standard"  # standard, simple, technical, glossary
+    mode: Optional[str] = "standard"
 
 class QuestionResponse(BaseModel):
     answer: str

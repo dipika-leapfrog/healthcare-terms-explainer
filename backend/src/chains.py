@@ -23,12 +23,16 @@ class HealthcareQAChain:
             
             Question: {question}
             
+            IMPORTANT: Only answer questions related to healthcare, medical terminology, healthcare processes, procedures, coding systems, regulations, or medical concepts. If the question is not related to healthcare, politely decline and state: "I can only assist with healthcare-related questions. Please ask about healthcare terminology, processes, or medical concepts."
+            
             Provide a comprehensive answer that:
             1. Directly answers the question
             2. Includes relevant details and context
             3. Mentions the source of information when available
             4. Uses clear, professional language
             
+            Note: Do not fabricate information. If the answer is not in the context, respond with 'Information not available in the provided context.'
+
             Answer:""",
             input_variables=["context", "question"]
         )
@@ -40,6 +44,8 @@ class HealthcareQAChain:
             Context: {context}
             
             Question: {question}
+
+            IMPORTANT: Only answer questions related to healthcare, medical terminology, healthcare processes, procedures, coding systems, regulations, or medical concepts. If the question is not related to healthcare, politely decline and state: "I can only assist with healthcare-related questions. Please ask about healthcare terminology, processes, or medical concepts."
             
             Provide a simple explanation that:
             1. Uses everyday language
@@ -58,6 +64,8 @@ class HealthcareQAChain:
             Context: {context}
             
             Question: {question}
+
+            IMPORTANT: Only answer questions related to healthcare, medical terminology, healthcare processes, procedures, coding systems, regulations, or medical concepts. If the question is not related to healthcare, politely decline and state: "I can only assist with healthcare-related questions. Please ask about healthcare terminology, processes, or medical concepts."
             
             Provide a detailed technical answer that:
             1. Includes all relevant technical details
@@ -75,6 +83,8 @@ class HealthcareQAChain:
             Context: {context}
             
             Term: {question}
+
+            IMPORTANT: Only answer questions related to healthcare, medical terminology, healthcare processes, procedures, coding systems, regulations, or medical concepts. If the question is not related to healthcare, politely decline and state: "I can only assist with healthcare-related questions. Please ask about healthcare terminology, processes, or medical concepts."
             
             Provide a brief definition that:
             1. Gives a clear, concise definition

@@ -1,8 +1,9 @@
 # Core Dependencies
-langchain==0.1.0
-langchain-openai==0.0.2
-langchain-community==0.0.10
-openai==1.6.1
+langchain==0.3.13
+langchain-openai==0.2.14
+langchain-community==0.3.13
+langchain-text-splitters==0.3.3
+openai==1.58.1
 
 # Vector Database
 chromadb==0.4.18
@@ -21,15 +22,15 @@ python-multipart==0.0.6
 python-dotenv==1.0.0
 
 # Evaluation and Monitoring
-langsmith==0.0.69
+langsmith==0.2.0
 
 # Text Processing
-tiktoken==0.5.2
+tiktoken==0.7.0
 sentence-transformers==2.2.2
 
 # Utilities
 requests==2.31.0
-pydantic==2.5.2
+pydantic==2.10.5
 numpy==1.24.3
 
 # Development
